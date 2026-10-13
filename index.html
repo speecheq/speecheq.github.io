@@ -47,43 +47,46 @@
           <span class="aff-block"><sup>*</sup>Anonymous Affiliations</span>
         </div>
 
-        <div class="publication-venue">
+        <!-- <div class="publication-venue">
           <span>Under Review, 2026</span>
-        </div>
+        </div> -->
         <div class="publication-links">
-          <a
-            class="btn-pub"
-            href="https://example.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <span
+            class="btn-pub is-disabled"
+            role="link"
+            aria-disabled="true"
+            tabindex="0"
+            data-tooltip="Link unavailable due to anonymity"
           >
             <span class="icon" aria-hidden="true">
               <i class="fas fa-file-pdf"></i>
             </span>
             <span class="btn-pub-label">Paper</span>
-          </a>
-          <a
-            class="btn-pub"
-            href="https://example.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          </span>
+          <span
+            class="btn-pub is-disabled"
+            role="link"
+            aria-disabled="true"
+            tabindex="0"
+            data-tooltip="Link unavailable due to anonymity"
           >
             <span class="icon" aria-hidden="true">
               <i class="fab fa-github"></i>
             </span>
             <span class="btn-pub-label">Code</span>
-          </a>
-          <a
-            class="btn-pub"
-            href="https://example.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          </span>
+          <span
+            class="btn-pub is-disabled"
+            role="link"
+            aria-disabled="true"
+            tabindex="0"
+            data-tooltip="Link unavailable due to anonymity"
           >
             <span class="icon" aria-hidden="true">
               <i class="fas fa-database"></i>
             </span>
             <span class="btn-pub-label">Dataset</span>
-          </a>
+          </span>
         </div>
       </section>
 
@@ -114,7 +117,7 @@
           <p>
             <strong>The challenge.</strong> As multimodal conversational systems increasingly
             engage in spoken interaction, their ability to navigate paralinguistic social cues
-            &mdash; tone, prosody, timing &mdash; has become a critical bottleneck for natural
+            (e.g., tone, prosody, timing) has become a critical bottleneck for natural
             human&ndash;AI communication. Existing evaluations of machine emotional intelligence
             assess reasoning either through isolated text or passive acoustic perception,
             overlooking the cross-modal reasoning required for active, multi-turn dialogue.
@@ -138,12 +141,15 @@
             situational demand, reasoning, <code>selected</code>).
           </p>
           <p>
-            <strong>Findings.</strong> End-to-end Speech-Language Models outperform cascaded
-            SER&nbsp;+&nbsp;LLM systems, but current multimodal models remain bottlenecked by three
-            recurring failure modes that SpeechEQ surfaces as concrete, subscale-level deficits:
-            a text-reliant <em>modality shortcut</em>, an alignment-induced <em>safety trap</em>,
-            and <em>contextual amnesia</em> across multi-turn dialogue &mdash; the barriers between
-            today's voice models and truly emotionally-aware AI.
+            <strong>Findings.</strong> The strongest end-to-end Speech-Language Model outperforms cascaded
+            SER&nbsp;+&nbsp;LLM systems, while several native-audio models remain near chance.
+            SpeechEQ further reveals three challenges in the best-performing model:
+            <em>arousal aversion</em> when socially appropriate responses require greater intensity,
+            <em>multi-turn degradation</em> across successive response selections,
+            and <em>asymmetric persona effects</em>, with stress-management deficit
+            conditioning causing the largest performance decline, highlighting
+            the need for context-sensitive vocal judgments across emotional demands
+            and interaction settings.
           </p>
         </div>
       </section>
@@ -153,7 +159,7 @@
         <p class="section-lead">
           One scenario per EQ-i&nbsp;2.0 subscale (15 total). Each plays as a full
           six-sentence conversation; the Speaker&nbsp;2 EQ-test sentences (S4 and S6) ship as
-          a high-EQ and a low-EQ rendition with identical text &mdash; only prosody differs.
+          a high-EQ and a low-EQ rendition with identical text, only prosody differs.
         </p>
 
         <div
@@ -238,7 +244,7 @@
           <p>
             To make scores comparable across very different model families, we apply a robust
             normalization. Per subscale, let \(x\) denote each model's sample-level
-            <em>joint</em> accuracy &mdash; the probability that the model selects correctly at
+            <em>joint</em> accuracy: the probability that the model selects correctly at
             <em>both</em> S4 and S6 for the same item:
           </p>
 
@@ -319,12 +325,12 @@
 
     <footer class="site-footer">
       <p>
-        SpeechEQ demo ·
-        <a href="https://example.com" target="_blank" rel="noopener noreferrer">Paper</a>
+        SpeechEQ ·
+        <span class="footer-link-disabled" aria-disabled="true" title="Link unavailable due to anonymity">Paper</span>
         ·
-        <a href="https://example.com" target="_blank" rel="noopener noreferrer">Code</a>
+        <span class="footer-link-disabled" aria-disabled="true" title="Link unavailable due to anonymity">Code</span>
         ·
-        <a href="https://example.com" target="_blank" rel="noopener noreferrer">Dataset</a>
+        <span class="footer-link-disabled" aria-disabled="true" title="Link unavailable due to anonymity">Dataset</span>
       </p>
     </footer>
 

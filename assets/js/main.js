@@ -248,8 +248,7 @@
 
   let radarChart = null;
 
-  const DEFAULT_VISIBLE_COUNT = 6;
-  const radarVisible = cfg.models.map(function (_m, i) { return i < DEFAULT_VISIBLE_COUNT; });
+  const radarVisible = cfg.models.map(function () { return true; });
 
   function renderRadarToggleBar() {
     const bar = $("#radar-toggle-bar");

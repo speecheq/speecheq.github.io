@@ -121,6 +121,45 @@ code {
   box-shadow: var(--shadow-md);
 }
 
+/* Links withheld during anonymous review */
+.btn-pub.is-disabled {
+  position: relative;
+  cursor: not-allowed;
+  opacity: 0.55;
+  user-select: none;
+}
+
+.btn-pub.is-disabled:hover,
+.btn-pub.is-disabled:active {
+  background: var(--text);
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-pub.is-disabled::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  background: #222;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 10;
+}
+
+.btn-pub.is-disabled:hover::after,
+.btn-pub.is-disabled:focus-visible::after {
+  opacity: 1;
+}
+
 main {
   max-width: var(--max);
   margin: 0 auto;
@@ -271,6 +310,7 @@ main {
 .prose {
   max-width: 70ch;
   margin: 0 auto;
+  text-align: center;
 }
 
 .prose p {
@@ -967,4 +1007,9 @@ th.sortable.sort-desc::after {
 
 .site-footer a:hover {
   text-decoration: underline;
+}
+
+.site-footer .footer-link-disabled {
+  color: var(--muted);
+  cursor: not-allowed;
 }
